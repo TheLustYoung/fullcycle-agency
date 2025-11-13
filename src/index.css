@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-stone-100 text-slate-900 antialiased;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Inter", "Segoe UI", sans-serif;
+}
+
+/* Лёгкий «не белый» фон */
+.bg-shell {
+  background: radial-gradient(circle at 0% 0%, #e5e7eb 0, transparent 55%),
+    radial-gradient(circle at 100% 0%, #e7e5ff 0, transparent 60%),
+    radial-gradient(circle at 0% 100%, #fef3c7 0, transparent 55%),
+    #f5f5f4;
+}
+
+/* Стеклянные карточки */
+.glass {
+  @apply bg-white/70 backdrop-blur-xl border border-slate-200/80 shadow-[0_18px_50px_rgba(15,23,42,0.08)];
+}
+
+/* Мелкое подчёркнутое «дорого» */
+.section-label {
+  @apply text-[0.7rem] uppercase tracking-[0.3em] text-slate-500;
+}
